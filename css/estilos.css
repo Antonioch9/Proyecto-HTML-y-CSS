@@ -1,0 +1,525 @@
+/*estilos generales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #3f3f3f;
+    font-size: 20px;
+}
+p {
+ 
+    padding: 20px;
+}
+a {
+    text-decoration: none;
+    color: #3f3f3f;
+}
+a:hober {
+    color: #EA5C1C;
+}
+a.activo {
+    color: #EA5C1C
+}
+img {
+    max-width: 100%;
+}
+a:hover {
+    color:sandybrown;
+}
+@keyframes intermitente {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+.separador {
+    border: #EA5C1C solid 1px;
+    display: none;
+    width: 60%;
+}
+/*formulario newletter*/
+.miniform {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+}
+.miniform p{
+    background:radial-gradient(rgb(238, 255, 0), red);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 60px;
+    
+
+}
+.miniform input {
+    border: 3px solid black;
+    color: #EA5C1C;
+    background-color: rgba(231, 169, 24, 0.561);
+    padding: 10px;
+    font-size: 24px;
+}
+.miniform input:hover {
+    background-color: rgba(255, 123, 0, 0.808);
+    color: white;
+}
+.miniform .boton {
+    background-color: rgba(197, 25, 25, 0.74);
+    color: whitesmoke;
+    border: 3px solid black;
+}
+input:focus {/*quita el foco de color azul cuando pinchamos sobnre el */
+    outline: none;
+}
+.miniform .boton:hover {
+    background-color: red;
+    color: black;
+}
+.fila {
+    margin:40px 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+/*para la pagina de contactos*/
+.primera{
+    margin-top: 100px;
+}
+.direccion {
+    line-height: 2em;
+}
+.legales h1 {
+    font-size: 20px;
+}
+.legales h2,p{
+    font-size: 18px;
+}
+.legales p,li {
+    font-size: 16px;
+}
+.legal {
+   flex-wrap: wrap;
+   display: flex;
+   line-height: 5em;
+   font-size: 10px;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+.legal a:hover {
+    color:sandybrown;
+    font-size: 20px;
+}
+/*para la pagina de contactos*/
+
+.col1 {
+    /*ancho de referecia*/
+    flex-basis: 300px; 
+    flex-grow: 1;
+    padding: 10px;
+}
+.col2 {
+    flex-basis: 300px; 
+    flex-grow: 2;
+    padding: 10px;
+
+}
+.col3 {
+    flex-basis: 300px; 
+    flex-grow: 3;
+    padding: 10px;
+
+}
+.columna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.centrado {
+    display: flex;
+    justify-content: center;
+    align-items: center,
+}
+.pie {
+    display: flex;
+    align-items: flex-end;
+}
+.boton {
+    color: whitesmoke;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    background-color: #2DABE3;
+    
+}
+.naranja {
+    background-color: #EA5C1C;
+    box-shadow: 5px 5px 5px rgb(148, 43, 5);
+}
+.naranja:hover {
+    box-shadow: 10px 5px 5px rgba(29, 28, 28, 0.76);
+    color:black;
+}
+.azul {
+    background-color: #2DABE3;
+    box-shadow: 5px 5px 5px rgb(6, 89, 128);
+}
+.azul:hover {
+    box-shadow: 10px 5px 5px rgba(29, 28, 28, 0.76);
+    color:black;
+}
+.amarillo {
+    background-color: #F3C100;
+    box-shadow: 5px 5px 5px rgb(182, 155, 0);
+    
+}
+.amarillo:hover {
+    box-shadow: 10px 5px 5px  rgba(29, 28, 28, 0.76);
+    color:black;
+    background-color: #E8A50A;
+}
+.fondo {
+    background-image: url('../img/ipad-605420_1920.jpg');
+    margin: 0;
+    padding: 60px 60px;
+    color: black;
+    background-position: top;
+    background-size: cover;
+    background-attachment: inherit;
+}
+.eslogan {
+    font-size: 45px;
+    padding: 20px;
+}
+
+
+/*cabecera barra de navegacion*/
+.burger {
+    color: white;
+    font-size: 40px;
+    display: none;
+}
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100vh;
+    display: none;
+    background-color: orangered;
+    z-index: 10;
+}
+.cerrar {
+    font-size: 34px;
+    color: white;
+    padding-top: 22px;
+    padding-left: 28px;
+}
+.menu ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+.menu ul a:hover{
+    background-color: rgb(148, 43, 5);
+}
+.menu ul a {
+    color: white;
+    padding: 10px;
+    width: 100%;
+}
+.menu ul a.activo {
+    background-color: rgb(98, 28, 2);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    padding: 0 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: #2828286b;
+}
+.logo {
+    font-size: 50px;
+    color: white;
+}
+header nav ul {
+    list-style: none;/*Con esto hacemos que ya no sea una lista*/
+    display: flex; 
+}
+header nav ul li  {
+    padding: 0 15px;
+}
+header nav ul li a {
+    color: white;
+}
+.blanco {
+    color: white;
+    
+}
+.blanco.logo {
+    color: white;
+}
+/*hero*/
+.hero {
+    height: 100vh;
+    background-image: url('../img/coffee-2425327_1920.jpg');
+    background-position: center;
+    background-size:cover;
+    /* background-attachment: fixed; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.hero h1 {
+    color: #485fc2;
+    font-size: 60px;
+    background:linear-gradient(#2c36c7, #e805f0);
+    -webkit-background-clip: text;
+    color: transparent;
+    
+    
+}
+.hero h2 {
+    color: #485fc2;
+    margin-bottom: 60px;
+    line-height: 2em;
+}
+.hero a {
+    color: #485fc2;
+    font-size: 40px;
+    margin-bottom: 60px;
+    animation-name: intermitente;
+    animation-duration: 1200ms;
+    animation-iteration-count: infinite;
+    
+}
+/*configuracion del footer*/
+footer {
+    /*all credits to Lea Verou*/
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background:
+        radial-gradient(black 15%, transparent 16%) 0 0,
+        radial-gradient(black 15%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+        radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#282828;
+    background-size:16px 16px; 
+    position: relative; 
+}
+/*para la flecha para ir para arriba*/
+.top {
+    height: 50px;
+    width: 50px;
+    border-radius: 26px;
+    background-color:#282828; 
+    position: absolute;
+    top: -54px;
+    left: 50%;
+    /* para centrar todo el elemento se mueve la mitad de lo que mida el elemento */
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: intermitente;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+    
+}
+.top:hover {
+    background-color: white;
+    color: black;
+    
+}
+footer p {
+    font-size: 18px;
+    padding: 5px;
+}
+.izdo{
+    padding: 15px;
+    flex-basis: 300px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.centro{
+    padding: 15px;
+    flex-basis: 300px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.centro .activo {
+    color: rgb(255, 119, 0);
+}
+.centro a  {
+    color: white;
+    padding: 5px;
+    font-size: 18px;
+}
+.centro a:hover {
+    color: sandybrown;
+}
+a.activo {
+    color: rgb(255, 119, 0);
+}
+.dcho {
+    padding: 15px;
+    flex-basis: 300px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.dcho a {
+    color: antiquewhite;
+}
+.copy {
+    padding: 5px;
+    width: 100%;
+}
+.copy p {
+    font-size: 12px;
+    text-align: center;
+}
+/*color para los iconos*/
+.face:hover {
+    color:#2c36c7;
+}
+.twe:hover{
+    color: #2DABE3;
+}
+.inst:hover{
+    color: #e805f0;
+}
+.you:hover{
+    color: red;
+}
+.fa-industry {
+    color: brown;
+}
+.fa-map-marker-alt{
+    color:goldenrod;
+}
+.fa-archive {
+    color: grey;
+}
+.fa-phone {
+    color: greenyellow;
+}
+.fa-envelope {
+    color: red;
+}
+/*cierre de colores para iconos*/
+    
+
+/*Media queris*/
+@media (min-width:1280px){
+    .hero, .fondo{
+        background-attachment: scroll;
+    }
+}
+ 
+@media (max-width:700px) {
+    .fila {
+        margin:40px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+   /* .col1,.col2,.col3 {
+       flex-basis: initial;
+   } */
+    .separador {
+        display: initial;
+    }
+    .columna {
+        margin: 10px;
+    }
+    .miniform p {
+        font-size: 40px;
+    }
+    .fila.primera {
+        margin: 100px 0 20px 0;
+    }
+  
+}
+
+@media (max-width:618px) {
+    .fila {
+        margin: 20px 0 20px 0;
+    }
+    
+    .boton {
+        font-size: 15px;
+        padding: 10px;
+    }
+   
+    .miniform input {
+        font-size: 19px;
+    }
+    
+    .miniform .boton {
+        font-size: 19px;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+    .izdo {
+        text-align: center;
+    }
+    
+    .ultima {
+        margin: 20px 0 80px 0;
+    }
+    .hero {
+        background-attachment: scroll;
+    }
+}
+@media (max-width:608px) {
+    .burger{
+        display: initial;
+    }
+    nav {
+        display: none;
+    }
+    .hero h1 {
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .hero h2 {
+        font-size: 26px;
+        width: 100%;
+        text-align: center;
+    }
+    .eslogan {
+        font-size: 30px;
+        margin: 0%;
+    }
+    .fondo {
+        padding: 0 20px 0 20px;
+   }
+    
+}
