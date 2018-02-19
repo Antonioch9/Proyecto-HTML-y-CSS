@@ -22,4 +22,16 @@ $(document).ready(function(){
             $("header").addClass("blanco");
         }
     });
+    //scroll suave
+    $("a").on("click",function(){
+        if (this.hash !== "") {
+            var hash = this.hash;
+            $("html, body").animate({
+                //objeto con una propiedad y valor
+                scrollTop: $(hash).offset().top
+            }, 800);
+            //sintaxis de animate
+            // animate ({objeto}, duración);
+        }
+    });
 });
