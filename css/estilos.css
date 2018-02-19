@@ -121,12 +121,7 @@ input:focus {/*quita el foco de color azul cuando pinchamos sobnre el */
     flex-grow: 1;
     padding: 10px;
 }
-.col2 {
-    flex-basis: 300px; 
-    flex-grow: 2;
-    padding: 10px;
 
-}
 .col3 {
     flex-basis: 300px; 
     flex-grow: 3;
@@ -498,8 +493,85 @@ a.activo {
     color: red;
 }
 /*cierre de colores para iconos*/
+/*Estilos para pagina HTML5*/
+.fila2 {
+    display: flex;
+}
+.tabs-container {
+   flex-basis: 100%;
+   
+}
+.menu3{
+    width: 240px;
     
+}
+.menu3 ul {
+    display: flex;
+    flex-direction: column;
+    height: 300px; 
+    overflow-y: scroll;
+    margin-top: 45px; 
+}
+.menu3 ul a {
+    padding: 10px;
+    width: 100%;
+}
+.menu3 ul a:hover {
+    background-color: #EA5C1C;
+    color: white;
+}
+.menu3 ul::-webkit-scrollbar {
+    width: 10px;
 
+}
+.menu3 ul::-webkit-scrollbar-track{
+    background-color: #ededed;
+}
+.menu3 ul::-webkit-scrollbar-thumb{
+    background-color: #EA5C1C;
+}
+.tabs {
+    list-style: none;
+    display: flex;
+}
+
+.tabs li {
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+    height: 45px;
+    
+}
+.tabs li.current {
+    margin-left: 10px;
+    border-radius: 10px 10px 0 0;
+    background-color: #ededed;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    color: #EA5C1C;
+    
+}
+.tab-content {
+    position: relative;
+    display: none;
+    top:-1px;
+    z-index: -1;
+    background-color: #ededed;
+    border: 1px solid black;
+    padding: 15px;
+    height:300px;
+    
+    
+}
+.tab-content.current {
+    display:block; 
+    
+    
+}
+
+
+/* FIN Estilos para pagina HTML5*/
 /*Media queris*/
 @media (min-width:1280px){
     .hero, .fondo{
@@ -514,9 +586,7 @@ a.activo {
         flex-direction: column;
         align-items: center;
     }
-   /* .col1,.col2,.col3 {
-       flex-basis: initial;
-   } */
+  
     .separador {
         display: initial;
     }

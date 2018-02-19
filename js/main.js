@@ -34,4 +34,16 @@ $(document).ready(function(){
             // animate ({objeto}, duración);
         }
     });
+    //pestañas
+    $(".tabs li").click(function(){
+        //recoger en tabId el valor del atriburo tab
+        var tabId = $(this).attr("tab");
+        //elimina la clase current a pestañas y contenido
+        $(".tabs li").removeClass("current");
+        $(".tab-content").removeClass("current");
+        //añade la clase current a la penstaña pulsada
+        $(this).addClass("current");
+        //añade la clase current al contenido con el mismo ID el valor de la variable tabId
+        $("#"+ tabId).addClass("current");
+    });
 });
