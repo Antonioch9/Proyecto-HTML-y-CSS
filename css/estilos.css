@@ -86,7 +86,7 @@ input:focus {/*quita el foco de color azul cuando pinchamos sobnre el */
 }
 /*para la pagina de contactos*/
 .primera{
-    margin-top: 100px;
+    margin-top: 120px;
 }
 .direccion {
     line-height: 2em;
@@ -149,6 +149,7 @@ input:focus {/*quita el foco de color azul cuando pinchamos sobnre el */
     border-radius: 5px;
     margin: 20px;
     background-color: #2DABE3;
+    cursor: pointer;
     
 }
 .naranja {
@@ -440,9 +441,7 @@ footer p {
 .centro a:hover {
     color: sandybrown;
 }
-a.activo {
-    color: rgb(255, 119, 0);
-}
+
 .dcho {
     padding: 15px;
     flex-basis: 300px;
@@ -498,12 +497,15 @@ a.activo {
     display: flex;
 }
 .tabs-container {
-   flex-basis: 100%;
+   flex-basis: 80%;/*medida de referencia*/
+   flex-grow: 1;/*creceer todo lo que pueda en la proporcion indicada*/
+   position: relative;
+  
    
 }
 .menu3{
-    width: 240px;
-    
+    width: 20%;
+    display: none; 
 }
 .menu3 ul {
     display: flex;
@@ -566,12 +568,71 @@ a.activo {
 }
 .tab-content.current {
     display:block; 
-    
+}
+.btn-side{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 45px;
+    width: 65px;
+    background-color: #EA5C1C;
+    color: white;
+    border-radius: 10px 0 0 0;
+    font-size: 26px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.fa-arrow-circle-right{
+    display: none;
+}
+/* FIN Estilos para pagina HTML5*/
+/*/////////////////////////////////////*/
+/*Estilos para pagina de JavaScript*/
+.modal {
+    position: fixed;/*respecto a viewport*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4); 
+    opacity: 0;
+    visibility: hidden;
+    z-index: 10;
+    transition: all 500ms ease;
+    background-color: white;
+}
+.modal.visible{
+    visibility: visible;
+    opacity: 1;
     
 }
+.modal-header {
+    font-size: 35px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: crimson;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.555);
+    opacity: 0;
+    z-index: -1;
+    transition: all 500ms ease;
+}
+.overlay.visible {
+    opacity: 1;
+    z-index: 7;
+}
 
-
-/* FIN Estilos para pagina HTML5*/
+/* FIN Estilos para pagina de JavaScript*/
 /*Media queris*/
 @media (min-width:1280px){
     .hero, .fondo{

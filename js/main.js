@@ -46,4 +46,17 @@ $(document).ready(function(){
         //añade la clase current al contenido con el mismo ID el valor de la variable tabId
         $("#"+ tabId).addClass("current");
     });
+    $(".btn-side").click(function(){
+        $(".menu3").animate({width:"toggle"},1500);
+        $(".fa-arrow-circle-right").toggle();
+        $(".fa-arrow-circle-left").toggle();
+    });
+    //ventana modal
+    $("#open").click(function(){
+        $(".modal,.overlay").addClass("visible");
+    });
+    $("#close, .overlay").click(function(){
+        $(".modal,.overlay").removeClass("visible");
+    });
+
 });
